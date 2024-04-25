@@ -1,0 +1,126 @@
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.messages h1 {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.message {
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  max-width: 70%;
+  align-self: flex-start;
+}
+
+.message.sent {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.send-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: linear-gradient(to right, #36D1DC, #5B86E5);
+  animation: animatedBackground 20s linear infinite alternate;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 24px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #777;
+  font-size: 14px;
+}
